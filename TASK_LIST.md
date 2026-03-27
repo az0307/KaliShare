@@ -1,137 +1,139 @@
-# KaliShare Task清单 / Task List
+# KaliShare Task List - All Completed Items
 
-## ✅ 完成的任务 (Completed)
+## ✅ Completed Tasks
 
-### 核心基础设施 (Core Infrastructure)
-- [x] 80+ Bash脚本 (scripts/*.sh)
-- [x] 24 个Skills (skills/*.md)
-- [x] 9 条工作流Chains (chains/*.md)
-- [x] 42 个文档文件 (docs/)
-- [x] CLI命令 (cli/go) - 50+命令
-- [x] 别名系统 (aliases.sh) - 80+别名
+### Core Infrastructure
+- [x] 80+ Bash scripts (scripts/*.sh)
+- [x] 24 Skills (skills/*.md)
+- [x] 9 Workflow Chains (chains/*.md)
+- [x] 42 Documentation files (docs/)
+- [x] CLI commands (cli/go) - 50+ commands
+- [x] Alias system (aliases.sh) - 80+ aliases
 
-### USB系统 (USB System)
+### USB System
 - [x] Bootable Kali Live USB (F:)
-- [x] Skeleton Key密码重置工具
-- [x] Windows密码绕过
-- [x] QUICK-START启动脚本
+- [x] Skeleton Key password reset tools
+- [x] Windows password bypass
+- [x] QUICK-START startup script
 
-### 自动化工具 (Automation)
-- [x] tool-widget.sh - TUI工具启动器
-- [x] essential-tools.sh - 必备工具安装
-- [x] stealth-mode.sh - 隐蔽模式
-- [x] detection-tracker.sh - 入侵检测追踪
-- [x] payload-generator.sh - 载荷生成器
-- [x] area-sweeper.sh - 自动网络扫描
-- [x] automation-hub.sh - 工作流编排
-- [x] audit-test.sh - 测试套件
-- [x] organize.sh - 目录整理
-- [x] comprehensive-setup.sh - 完整安装
+### Automation Tools
+- [x] tool-widget.sh - TUI tool launcher
+- [x] essential-tools.sh - Essential tools installer
+- [x] stealth-mode.sh - OPSEC stealth mode
+- [x] detection-tracker.sh - Intrusion detection tracking
+- [x] payload-generator.sh - Payload generator
+- [x] area-sweeper.sh - Auto network sweep
+- [x] automation-hub.sh - Workflow orchestration
+- [x] audit-test.sh - Test suite
+- [x] organize.sh - Directory organization
+- [x] comprehensive-setup.sh - Complete setup
 
-### 安全工具 (Security Tools)
-- [x] recon-full.sh / recon-full-safe.sh - 完整侦察
-- [x] vuln-scan.sh / vuln-scan-safe.sh - 漏洞扫描
-- [x] hash-crack.sh - 哈希破解
-- [x] wifi-audit.sh - WiFi审计
-- [x] web-enum.sh - Web枚举
-- [x] payloads.sh - 有效载荷
-- [x] privesc-linux.sh / privesc-win.ps1 - 提权
-- [x] loot-gather.sh - 战利品收集
-- [x] steg-break.sh - 隐写分析
-- [x] forensics.sh - 取证
-- [x] cloud-creds.sh - 云凭证收集
-- [x] wifi-map.sh - WiFi数据库映射
-- [x] stealth-transfer.sh - 隐蔽传输
+### Security Tools
+- [x] recon-full.sh / recon-full-safe.sh - Full reconnaissance
+- [x] vuln-scan.sh / vuln-scan-safe.sh - Vulnerability scanning
+- [x] hash-crack.sh - Hash cracking
+- [x] wifi-audit.sh - WiFi auditing
+- [x] web-enum.sh - Web enumeration
+- [x] payloads.sh - Payload generation
+- [x] privesc-linux.sh / privesc-win.ps1 - Privilege escalation
+- [x] loot-gather.sh - Loot collection
+- [x] steg-break.sh - Steganography analysis
+- [x] forensics.sh - Digital forensics
+- [x] cloud-creds.sh - Cloud credential harvesting
+- [x] wifi-map.sh - WiFi database mapping
+- [x] stealth-transfer.sh - Covert transfer methods
 
-### 错误处理 (Error Handling)
-- [x] error-fallback.sh - 通用错误处理
-- [x] multi-fallback.sh - 多工具回退
-- [x] audit-all.sh - 全系统审计
-- [x] audit-expert.md - 审计专家技能
-- [x] recon-full-safe.sh - 安全版侦察
-- [x] vuln-scan-safe.sh - 安全版漏洞扫描
+### Error Handling
+- [x] error-fallback.sh - Universal error handler
+- [x] multi-fallback.sh - Multi-tool fallback orchestration
+- [x] audit-all.sh - Full system audit
+- [x] audit-expert.md - Audit expert skill
+- [x] recon-full-safe.sh - Safe version reconnaissance
+- [x] vuln-scan-safe.sh - Safe version vuln scan
 
-### 手机/转移 (Phone & Transfer)
-- [x] android-transfer.sh - Android文件传输
-- [x] ios-transfer.sh - iOS文件传输
-- [x] phone-packets.sh - 手机数据包捕获
+### Phone & Transfer
+- [x] android-transfer.sh - Android file transfer
+- [x] ios-transfer.sh - iOS file transfer
+- [x] phone-packets.sh - Phone packet capture & transfer
 
-### 桌面应用 (Desktop Apps)
+### Desktop Apps
 - [x] desktop/kalishare-desktop.py - Windows GUI
-- [x] desktop/KaliShare-Connector.py - SSH连接器
-- [x] desktop/KaliShare-Connector.bat - Windows启动器
-- [x] android/kalishare-mobile.py - Android连接
-- [x] android/setup-mobile.sh - 手机设置
+- [x] desktop/KaliShare-Connector.py - SSH connector
+- [x] desktop/KaliShare-Connector.bat - Windows launcher
+- [x] android/kalishare-mobile.py - Android connector
+- [x] android/setup-mobile.sh - Mobile setup
 
-### 文档 (Documentation)
-- [x] KALISHARE-BIBLE.md - 完整参考指南
-- [x] QUICK-REFERENCE.txt - 快速参考
-- [x] docs/06_REFERENCE/BEST-REPOS.md - 最佳仓库
-- [x] docs/06_REFERENCE/HIDDEN-GEMS.md - 隐藏宝石
-- [x] docs/06_REFERENCE/VERIFIED-REPOS.md - 验证仓库
-- [x] docs/06_REFERENCE/AI-MODELS-PARROT-KALI.md - AI模型对比
-- [x] skills/SKILLS-CATALOG.md - 技能目录
-- [x] skills/scripts-skill.md - 脚本技能
-- [x] skills/audit-expert.md - 审计专家
-- [x] skills/expert-pentester.md - 渗透测试专家
-- [x] skills/test-expert.md - 测试专家
-- [x] skills/linux-expert.md - Linux专家
+### Documentation
+- [x] KALISHARE-BIBLE.md - Complete reference guide
+- [x] QUICK-REFERENCE.txt - Quick reference
+- [x] docs/06_REFERENCE/BEST-REPOS.md - Top repos
+- [x] docs/06_REFERENCE/HIDDEN-GEMS.md - Hidden gems
+- [x] docs/06_REFERENCE/VERIFIED-REPOS.md - Verified repos
+- [x] docs/06_REFERENCE/AI-MODELS-PARROT-KALI.md - AI model comparison
+- [x] skills/SKILLS-CATALOG.md - Skills catalog
+- [x] skills/scripts-skill.md - Scripts skill
+- [x] skills/audit-expert.md - Audit expert
+- [x] skills/expert-pentester.md - Pentest expert
+- [x] skills/test-expert.md - Test expert
+- [x] skills/linux-expert.md - Linux expert
 
-### GitHub推送 (GitHub Push)
-- [x] 创建repo: az0307/KaliShare
-- [x] 清理历史(移除API密钥)
-- [x] 推送到master分支
+### GitHub Push
+- [x] Create repo: az0307/KaliShare
+- [x] Clean history (remove API keys)
+- [x] Push to master branch
 
-### USB同步 (USB Sync)
-- [x] 同步所有脚本到F:
-- [x] 同步所有技能到F:
-- [x] 同步所有文档到F:
-- [x] 同步CLI到F:
+### USB Sync
+- [x] Sync all scripts to F:
+- [x] Sync all skills to F:
+- [x] Sync all docs to F:
+- [x] Sync CLI to F:
 
 ---
 
-## 📋 统计 (Statistics)
+## 📋 Statistics
 
-| 类别 | 数量 |
-|------|------|
-| 脚本 | 84 |
+| Category | Count |
+|----------|-------|
+| Scripts | 84 |
 | Skills | 24 |
 | Chains | 9 |
-| 文档 | 42 |
-| CLI命令 | 50+ |
-| 别名 | 80+ |
+| Docs | 42 |
+| CLI Commands | 50+ |
+| Aliases | 80+ |
 
 ---
 
-## 🚀 使用方法 (Usage)
+## 🚀 Usage
 
 ```bash
-# 启动
+# Startup
 cd /mnt
 sudo ./QUICK-START.sh
 
-# 常用命令
-sudo ./cli/go status        # 系统状态
-sudo ./cli/go wifi-menu    # WiFi工具
-sudo ./cli/go quick <IP>   # 快速扫描
-sudo ./cli/go win-reset    # Windows密码重置
+# Common commands
+sudo ./cli/go status        # System status
+sudo ./cli/go wifi-menu    # WiFi tools
+sudo ./cli/go quick <IP>   # Quick scan
+sudo ./cli/go win-reset    # Windows password reset
 
-# 或使用go命令
-go widget          # 工具窗口
-go essential       # 必备工具
-go stealth         # 隐蔽模式
-go detect          # 检测追踪
-go payload          # 载荷生成
-go audit            # 运行测试
+# Or use go command
+go widget          # Tool widget
+go essential       # Essential tools
+go stealth         # Stealth mode
+go detect          # Detection tracker
+go payload         # Payload generator
+go audit            # Run tests
 
-# 运行特定脚本
-./scripts/audit-all.sh full     # 完整审计
-./scripts/phone-packets.sh     # 手机传输
-./scripts/cloud-creds.sh       # 云凭证
-./scripts/wifi-map.sh          # WiFi映射
-./scripts/stealth-transfer.sh  # 隐蔽传输
+# Run specific scripts
+./scripts/audit-all.sh full     # Full audit
+./scripts/phone-packets.sh     # Phone transfer
+./scripts/cloud-creds.sh       # Cloud credentials
+./scripts/wifi-map.sh          # WiFi mapping
+./scripts/stealth-transfer.sh  # Stealth transfer
 ```
 
 ---
 
-*Updated: 2026-03-27*
+**GitHub:** https://github.com/az0307/KaliShare  
+**USB:** F: drive synced  
+**Updated:** 2026-03-27
