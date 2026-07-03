@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Tests for kali-share. Stdlib only — no live network beyond loopback."""
+from __future__ import annotations
+
 import threading
 import unittest
 import urllib.error
