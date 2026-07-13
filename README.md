@@ -51,6 +51,8 @@ curl -H "Authorization: Bearer $KALI_SHARE_TOKEN" http://<kali>:8000/tool.sh -O
 
 - Bearer token compared in constant time (`hmac.compare_digest`).
 - Directory traversal (`..`) is normalised and confined to the served root.
+- Symlinks are resolved to their real path and rejected if they escape the
+  share root (defeats symlink-based escapes, CWE-59).
 - Read-only: only `GET` / `HEAD` are handled — no uploads.
 
 ## Development

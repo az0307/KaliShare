@@ -78,6 +78,19 @@ class AuthEnforcedTests(ServerTestBase):
             self.get("/../../etc/passwd", token=self.token)
         self.assertIn(ctx.exception.code, (HTTPStatus.NOT_FOUND, HTTPStatus.FORBIDDEN))
 
+    def test_symlink_escape_blocked(self):
+        # A symlink inside the share pointing outside must not leak the target.
+        secret = Path(self.tmp.name).parent / "outside_secret.txt"
+        secret.write_text("TOP SECRET\n")
+        try:
+            (self.root / "link.txt").symlink_to(secret)
+            with self.assertRaises(urllib.error.HTTPError) as ctx:
+                self.get("/link.txt", token=self.token)
+            self.assertIn(ctx.exception.code,
+                          (HTTPStatus.NOT_FOUND, HTTPStatus.FORBIDDEN))
+        finally:
+            secret.unlink(missing_ok=True)
+
 
 class OpenShareTests(ServerTestBase):
     token = None  # --no-auth mode

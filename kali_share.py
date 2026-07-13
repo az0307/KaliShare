@@ -58,6 +58,7 @@ class TokenAuthHandler(SimpleHTTPRequestHandler):
     """
 
     token: str | None = None
+    share_root: str | None = None
 
     def _authorized(self) -> bool:
         if self.token is None:
@@ -67,6 +68,20 @@ class TokenAuthHandler(SimpleHTTPRequestHandler):
             return False
         # Constant-time compare to avoid leaking the token via timing.
         return hmac.compare_digest(supplied, self.token)
+
+    def translate_path(self, path: str) -> str:
+        # SimpleHTTPRequestHandler normalises '..' but follows symlinks, so a
+        # symlink inside the share pointing elsewhere would escape the root.
+        # Resolve the real path and confine it to the canonical share root.
+        candidate = os.path.realpath(super().translate_path(path))
+        root = self.share_root or os.path.realpath(str(self.directory))
+        try:
+            if os.path.commonpath([candidate, root]) != root:
+                return os.path.join(root, "__forbidden__")
+        except ValueError:
+            # Different drives / mixed absolute-relative — treat as escape.
+            return os.path.join(root, "__forbidden__")
+        return candidate
 
     def _reject(self) -> None:
         self.send_response(HTTPStatus.UNAUTHORIZED)
@@ -96,8 +111,15 @@ def build_server(directory: str, host: str, port: int,
     if not os.path.isdir(directory):
         raise NotADirectoryError(f"share directory does not exist: {directory}")
 
-    handler_cls = type("BoundTokenAuthHandler", (TokenAuthHandler,), {"token": token})
-    handler = partial(handler_cls, directory=directory)
+    # Normalise the root to a canonical real path once, so every containment
+    # check compares resolved paths (defeats symlink escapes).
+    share_root = os.path.realpath(directory)
+    handler_cls = type(
+        "BoundTokenAuthHandler",
+        (TokenAuthHandler,),
+        {"token": token, "share_root": share_root},
+    )
+    handler = partial(handler_cls, directory=share_root)
     return ThreadingHTTPServer((host, port), handler)
 
 
