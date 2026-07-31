@@ -63,5 +63,5 @@ make lint     # py_compile syntax check
 make serve    # serve ./ on :8000 with a random token
 ```
 
-Requires only Python 3.8+ (standard library). CI runs the test suite on every
+Requires only Python 3.9+ (standard library). CI runs the test suite on every
 push and pull request (`.github/workflows/ci.yml`).
