@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local share contents / loot — never commit
+share/
+loot/
+*.iso
+*.img
+
+# Secrets
+.env
+*_token*
+*.pem
+*.key
+
+# OS
+.DS_Store
+*.swp
