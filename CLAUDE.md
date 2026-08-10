@@ -10,7 +10,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Current State
 
-```
+```text
 README.md    # one-line project description
 ```
 
