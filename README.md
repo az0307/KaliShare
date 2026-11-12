@@ -2,6 +2,22 @@
 
 Kali Linux home lab — bootable USB, AI tools, pentest automation.
 
+## Device fleet setups
+
+Ultimate setup guides for a coordinated three-device fleet — one field pentest
+rig, one clean daily driver, one always-on AI brain — in
+[`docs/device-setups/`](docs/device-setups/):
+
+| Device | Role | Guide |
+|--------|------|-------|
+| Samsung Galaxy S10 | Kali NetHunter field rig | [`S10_KALI_NETHUNTER.md`](docs/device-setups/S10_KALI_NETHUNTER.md) |
+| Oppo | Hardened daily driver (non-root) | [`OPPO_DAILY_DRIVER.md`](docs/device-setups/OPPO_DAILY_DRIVER.md) |
+| HP Mini G9 | AI brain + command center | [`HP_MINI_G9_AI.md`](docs/device-setups/HP_MINI_G9_AI.md) |
+
+Provisioning helpers: `scripts/setup-hp-mini-g9.sh` (Ubuntu host) and
+`scripts/setup-s10-nethunter.sh` (run in the NetHunter chroot). Both take
+`--help`. Start with the [fleet README](docs/device-setups/README.md).
+
 ## `kali-share` — token-authenticated lab file share
 
 A zero-dependency (Python 3 stdlib only) helper for moving tools, wordlists,
